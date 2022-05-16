@@ -1,4 +1,6 @@
-import budibackuplib as bb
+import budibacklib as bb
+import os
+from settings import REMOTE_NAME
 
 containers = bb.get_budi_containers()
 folder = bb.create_backup_folder()

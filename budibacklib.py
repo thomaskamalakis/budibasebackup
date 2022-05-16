@@ -72,10 +72,10 @@ def get_current_path():
 
 def zip_folder(folder, zip_file):
     pwd = get_current_path()
-    execute('cd', folder)
+    os.chdir(folder)
     print('Creating zip file:', zip_file, 'for folder ', folder)
     execute(['zip', '-r', zip_file, '.'] )
-    execute('cd', pwd)
-    
+    os.chdir(pwd)
+
 def remove_folder(folder):
     execute(['rm', '-r', folder] )
